@@ -10,21 +10,32 @@ body {
   background-color: black;
 }
 
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .calculator {
   height: fit-content;
-  width: 50vmin;
-  margin: 5rem auto;
   padding: 2rem;
   border-radius: 0.5rem;
   box-shadow: 0 2px 10px #353030;
 }
 
 .input {
+  height: 80px;
+  padding: 1rem;
   color: white;
   text-align: end;
-  font-size: 1.95rem;
+  font-size: 2.25rem;
   font-weight: bold;
-  margin: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  background-color: #252424;
+  box-shadow: 0 2px 10px rgb(95, 95, 95);
 }
 
 .numeric-container {
@@ -34,10 +45,11 @@ body {
 }
 
 .btn {
-  height: 10vmin;
-  width: 10vmin;
-  font-size: 1.95rem;
+  height: 70px;
+  width: 70px;
+  font-size: clamp(1.85rem, 5vw, 2.2rem);
   border: none;
+  outline: none;
   border-radius: 50%;
   color: white;
   background-color: #252424;
@@ -52,18 +64,36 @@ body {
 
 .powGrey {
   color: rgb(32, 31, 31);
-  background-color: rgb(223, 213, 213);
-  transition: all 0.35s ease;
+  background-color: rgb(173 169 169);
   text-shadow: none;
 }
 .powGrey:hover {
-  background-color: rgb(143, 149, 156);
+  background-color: rgb(202, 198, 198);
 }
 .orange {
   background-color: rgb(255, 106, 0);
-  transition: all 0.35s ease;
 }
 
 .orange:hover {
-  background-color: rgb(245, 106, 7);
+  background-color: rgb(244, 124, 39);
+}
+
+@media (max-width: 450px) {
+  .input {
+    height: 50px;
+  }
+  .calculator {
+    padding: 1rem;
+  }
+  .btn {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (max-width: 370px) {
+  .btn {
+    height: 50px;
+    width: 50px;
+  }
 }
